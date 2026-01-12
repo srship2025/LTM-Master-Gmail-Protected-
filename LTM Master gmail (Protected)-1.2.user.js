@@ -630,16 +630,18 @@
             const wrapper = document.getElementById('tm-popup-container');
             const marqueeText = document.getElementById('tm-persistent-marquee');
 
-     // 🌀 PERSISTENT SYNC LOGIC 🌀
-            const duration = 60000; // ১৮ সেকেন্ড (CSS এর সাথে মিল রাখতে হবে)
-            function syncAnimation() {
-                const currentTime = Date.now();
-                const offset = (currentTime % duration) * -1;
-                if (marqueeText) {
-                    marqueeText.style.animationDelay = offset + "ms";
+        // 🌀 PERSISTENT SYNC LOGIC 🌀
+          const duration = 80000; // ৮০ সেকেন্ড = ৮০,০০০ মিলি-সেকেন্ড  (CSS এর সাথে মিল রাখতে হবে)
+          function syncAnimation() {
+          const marqueeText = document.getElementById('tm-persistent-marquee'); // এলিমেন্টটি নিশ্চিত করা
+          const currentTime = Date.now();
+          const offset = (currentTime % duration) * -1;
+          if (marqueeText) {
+           marqueeText.style.animationDuration = "80s"; // এখানেও ফোর্স করা হলো
+           marqueeText.style.animationDelay = offset + "ms";
                 }
-            }
-            syncAnimation();
+             }
+           syncAnimation();
 
 
             const handle1 = wrapper.querySelector('.top-handle-area');
@@ -1915,6 +1917,7 @@
     })();
 
 })();
+
 
 
 
