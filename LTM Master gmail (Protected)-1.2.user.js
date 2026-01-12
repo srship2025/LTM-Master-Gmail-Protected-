@@ -445,7 +445,7 @@
                 font-size: 28px;
                 font-weight: bold;
                 font-family: 'Courier New', monospace;
-                animation: tm-marquee-scroll 40s linear infinite;
+                animation: tm-marquee-scroll 80s linear infinite;
                 will-change: transform;
             }
             @keyframes tm-marquee-scroll {
@@ -631,7 +631,7 @@
             const marqueeText = document.getElementById('tm-persistent-marquee');
 
      // 🌀 PERSISTENT SYNC LOGIC 🌀
-            const duration = 40000; // ১৮ সেকেন্ড (CSS এর সাথে মিল রাখতে হবে)
+            const duration = 60000; // ১৮ সেকেন্ড (CSS এর সাথে মিল রাখতে হবে)
             function syncAnimation() {
                 const currentTime = Date.now();
                 const offset = (currentTime % duration) * -1;
@@ -1915,5 +1915,6 @@
     })();
 
 })();
+
 
 
